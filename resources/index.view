@@ -1,4 +1,14 @@
 <svg id='wrapper' class="background">
   <text id="myLabel" />
-  <text class="foo">Hello World</text>
+	<svg id="baz">
+		<g id="bar">
+			<rect width="100" height="20" fill="green" />
+  			<text id="foo">Hello World</text>
+		</g>
+	</svg>
+	<svg>
+	  <g transform="rotate(45)">
+    <rect x="50%-50" y="50" width="100" height="20" fill="yellow" />
+	  </g>
+	</svg>
 </svg>

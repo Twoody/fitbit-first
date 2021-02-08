@@ -7,12 +7,25 @@
   width: 100%;
 }
 #myLabel {
+  
   fill: white;
-  font-size: 80;
+  font-size: 50;
   font-family: System-Bold;
   text-length: 32;
   text-anchor: middle;
   width: 100%;
   x: 50%;
-  y: 50%+40;
+  y: 60;
+}
+#baz {
+	x: 50% + 50;
+	y: 50%;
+}
+#bar {
+	transform: rotate(90);
+}
+#foo {
+	fill: white;
+	font-family: System-Regular;
+	font-size: 32;
 }
