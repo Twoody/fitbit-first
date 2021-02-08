@@ -1,6 +1,11 @@
 {
+  "name": "first",
+  "version": "0.1.0",
+  "private": true,
+  "license": "UNLICENSED",
   "devDependencies": {
-    "@fitbit/sdk": "~5.0.0"
+    "@fitbit/sdk-cli": "^1.7.3",
+    "@fitbit/sdk": "~5.0.1"
   },
   "fitbit": {
     "appUUID": "7bfadef6-ff2e-447d-a2ec-b564720b7dfc",
