@@ -1,18 +1,12 @@
-.background {
-  viewport-fill: blue;
-  
-}
-#wrapper {
-  height: 100%;
-  width: 100%;
-}
-#myLabel {
-  fill: white;
-  font-size: 80;
-  font-family: System-Bold;
+.defaultText {
+  font-size: 32;
+  font-family: System-Regular;
+  font-weight: regular;
   text-length: 32;
-  text-anchor: middle;
+}
+
+#background {
   width: 100%;
-  x: 50%;
-  y: 50%+40;
+  height: 100%;
+  fill: white;
 }
