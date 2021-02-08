@@ -3,20 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "license": "UNLICENSED",
-  "devDependencies": {
-    "@fitbit/sdk-cli": "^1.7.3",
-    "@fitbit/sdk": "~5.0.1"
-  },
   "fitbit": {
-    "appUUID": "7bfadef6-ff2e-447d-a2ec-b564720b7dfc",
-    "appType": "app",
+    "appUUID": "68894f06-30f9-47fe-830e-946c460cdd1b",
+    "appType": "clockface",
     "appDisplayName": "first",
     "iconFile": "resources/icon.png",
-    "wipeColor": "#00bcd4",
+    "wipeColor": "#ffffff",
     "requestedPermissions": [],
     "buildTargets": [
-      "vulcan",
-      "atlas"
+      "atlas",
+      "vulcan"
     ],
     "i18n": {
       "en-US": {
@@ -25,10 +21,12 @@
     },
     "defaultLanguage": "en-US"
   },
-  "dependencies": {
+  "devDependencies": {
+    "@fitbit/sdk": "~5.0.1",
     "@fitbit/sdk-cli": "^1.7.3"
   },
   "scripts": {
-    "build": "fitbit-build"
+    "build": "fitbit-build",
+    "debug": "fitbit"
   }
 }
