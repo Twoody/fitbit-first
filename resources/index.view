@@ -1,3 +1,4 @@
-<svg>
-  <rect id="background" />
+<svg id='wrapper' class="background">
+  <text id="myLabel" />
+  <text class="foo">Hello World</text>
 </svg>
