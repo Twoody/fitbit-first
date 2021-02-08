@@ -1,5 +1,6 @@
 import clock from "clock";
 import document from "document";
+import { display } from 'display';
 import { preferences } from "user-settings";
 import * as util from "../common/utils";
 
@@ -13,6 +14,7 @@ const myLabel = document.getElementById("myLabel");
 clock.ontick = (evt) => {
   let today = evt.date;
   let hours = today.getHours();
+
   if (preferences.clockDisplay === "12h") {
     // 12h format
     hours = hours % 12 || 12;
@@ -23,3 +25,14 @@ clock.ontick = (evt) => {
   let mins = util.zeroPad(today.getMinutes());
   myLabel.text = `${hours}:${mins}`;
 }
+
+let isWhite = false;
+let change = setInterval(
+	() =>
+	{
+		myLabel.style.fill = isWhite ? 'red' : 'white'
+		isWhite = !isWhite;
+	},
+	300
+);
+
