@@ -1,7 +1,6 @@
 <svg id='wrapper' class="background">
-	<svg>
-		<image id="cooper" width="100%" height="100%" href="cooper2.png"/>
-		<text id="hoursLabel" class="time hours" />
-		<text id="minutesLabel" class="time minutes" />
-	</svg>
+	<image id="cooper" width="100%" height="100%" href="cooper2.png"/>
+	<text id="hoursLabel" class="time hours" />
+	<text id="minutesLabel" class="time minutes" />
+	<text id="stepsLabel" class="stat steps" />
 </svg>

@@ -1,15 +1,18 @@
-import clock from "clock";
-import document from "document";
-import { display } from 'display';
-import { preferences } from "user-settings";
-import * as util from "../common/utils";
+import clock from "clock"
+import document from "document"
+import { display } from 'display'
+import { me as appbit } from "appbit"
+import { preferences } from "user-settings"
+import { today } from "user-activity"
+import * as util from "../common/utils"
 
 // Update the clock every minute
-clock.granularity = "minutes";
+clock.granularity = "minutes"
 
 // Get a handle on the <text> element
-const hoursLabel = document.getElementById("hoursLabel");
-const minutesLabel = document.getElementById("minutesLabel");
+const hoursLabel = document.getElementById("hoursLabel")
+const minutesLabel = document.getElementById("minutesLabel")
+const stepsLabel =  document.getElementById("minutesLabel")
 
 // Update the <text> element every tick with the current time
 clock.ontick = (evt) => {
