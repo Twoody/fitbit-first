@@ -8,7 +8,8 @@ import * as util from "../common/utils";
 clock.granularity = "minutes";
 
 // Get a handle on the <text> element
-const myLabel = document.getElementById("myLabel");
+const hoursLabel = document.getElementById("hoursLabel");
+const minutesLabel = document.getElementById("minutesLabel");
 
 // Update the <text> element every tick with the current time
 clock.ontick = (evt) => {
@@ -23,11 +24,12 @@ clock.ontick = (evt) => {
     hours = util.zeroPad(hours);
   }
   let mins = util.zeroPad(today.getMinutes());
-  myLabel.text = `${hours} : ${mins}`;
+  hoursLabel.text = `${hours}`;
+  minutesLabel.text = `${mins}`;
 }
 
-const SATURATION_MAX = 0.84
-const SATURATION_MIN = 0.61
+const SATURATION_MAX = 0.78
+const SATURATION_MIN = 0.48
 let CLOCK_SATURATION = SATURATION_MAX
 let isSubtracting = true;
 let changeClockColor = setInterval(
@@ -53,9 +55,14 @@ let changeClockColor = setInterval(
 			isSubtracting = true
 		}
 
-		myLabel.style.fill = util.hslToHex(
-			348,
-			0.92,
+		hoursLabel.style.fill = util.hslToHex(
+			300,
+			0.84,
+			CLOCK_SATURATION
+		)
+		minutesLabel.style.fill = util.hslToHex(
+			300,
+			0.84,
 			CLOCK_SATURATION
 		)
 	},

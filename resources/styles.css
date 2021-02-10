@@ -1,21 +1,22 @@
 .background {
   viewport-fill: blue;
 }
-#wrapper {
-  height: 100%;
-  width: 100%;
-}
-#myLabel {
+.time {
   font-size: 50;
   font-family: System-Bold;
   text-length: 32;
   text-anchor: middle;
+}
+.hours {
+	x: 305;
+	y: 165;
+}
+.minutes {
+	x: 305;
+	y: 210;
+}
+#wrapper {
+  height: 100%;
   width: 100%;
-  x: 50%;
-  y: 50%;
 }
-#foo {
-	fill: white;
-	font-family: System-Regular;
-	font-size: 32;
-}
+
