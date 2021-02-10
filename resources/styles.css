@@ -1,28 +1,18 @@
 .background {
   viewport-fill: blue;
-  
 }
 #wrapper {
   height: 100%;
   width: 100%;
 }
 #myLabel {
-  
-  fill: white;
   font-size: 50;
   font-family: System-Bold;
   text-length: 32;
   text-anchor: middle;
   width: 100%;
   x: 50%;
-  y: 60;
-}
-#baz {
-	x: 50% + 50;
-	y: 50%;
-}
-#bar {
-	transform: rotate(90);
+  y: 50%;
 }
 #foo {
 	fill: white;

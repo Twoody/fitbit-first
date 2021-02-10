@@ -23,16 +23,42 @@ clock.ontick = (evt) => {
     hours = util.zeroPad(hours);
   }
   let mins = util.zeroPad(today.getMinutes());
-  myLabel.text = `${hours}:${mins}`;
+  myLabel.text = `${hours} : ${mins}`;
 }
 
-let isWhite = false;
-let change = setInterval(
+const SATURATION_MAX = 0.84
+const SATURATION_MIN = 0.61
+let CLOCK_SATURATION = SATURATION_MAX
+let isSubtracting = true;
+let changeClockColor = setInterval(
 	() =>
 	{
-		myLabel.style.fill = isWhite ? 'red' : 'white'
-		isWhite = !isWhite;
+		if (isSubtracting)
+		{
+			CLOCK_SATURATION = (CLOCK_SATURATION - 0.01).toFixed(2)
+		}
+		else
+		{
+			CLOCK_SATURATION = (CLOCK_SATURATION + 0.01).toFixed(2)
+		}
+		CLOCK_SATURATION = parseFloat(CLOCK_SATURATION)
+
+		// Figure out saturation direction
+		if (CLOCK_SATURATION === SATURATION_MIN)
+		{
+			isSubtracting = false
+		}
+		else if (CLOCK_SATURATION === SATURATION_MAX)
+		{
+			isSubtracting = true
+		}
+
+		myLabel.style.fill = util.hslToHex(
+			348,
+			0.92,
+			CLOCK_SATURATION
+		)
 	},
-	300
+	50
 );
 
