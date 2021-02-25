@@ -12,23 +12,26 @@ clock.granularity = "minutes"
 // Get a handle on the <text> element
 const hoursLabel = document.getElementById("hoursLabel")
 const minutesLabel = document.getElementById("minutesLabel")
-const stepsLabel =  document.getElementById("minutesLabel")
+const stepsLabel =  document.getElementById("stepsLabel")
 
 // Update the <text> element every tick with the current time
 clock.ontick = (evt) => {
-  let today = evt.date;
-  let hours = today.getHours();
+	let today = evt.date;
+	let hours = today.getHours();
 
-  if (preferences.clockDisplay === "12h") {
-    // 12h format
-    hours = hours % 12 || 12;
-  } else {
-    // 24h format
-    hours = util.zeroPad(hours);
-  }
-  let mins = util.zeroPad(today.getMinutes());
-  hoursLabel.text = `${hours}`;
-  minutesLabel.text = `${mins}`;
+	if (preferences.clockDisplay === "12h")
+	{
+		// 12h format
+		hours = hours % 12 || 12;
+	}
+	else
+	{
+		// 24h format
+		hours = util.zeroPad(hours);
+	}
+	let mins = util.zeroPad(today.getMinutes());
+	hoursLabel.text = `${hours}`;
+	minutesLabel.text = `${mins}`;
 }
 
 const SATURATION_MAX = 0.78
