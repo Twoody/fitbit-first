@@ -32,6 +32,15 @@ clock.ontick = (evt) => {
 	let mins = util.zeroPad(today.getMinutes());
 	hoursLabel.text = `${hours}`;
 	minutesLabel.text = `${mins}`;
+	if (appbit.permissions.granted("access_activity"))
+	{
+		//stepsLabel.text = `${today.adjusted.steps}`
+		stepsLabel.text = `${9999}`
+	}
+	else
+	{
+		console.log('no access')
+	}
 }
 
 const SATURATION_MAX = 0.78

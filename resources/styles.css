@@ -1,12 +1,6 @@
 .background {
   viewport-fill: blue;
 }
-.time {
-  font-size: 50;
-  font-family: System-Bold;
-  text-length: 32;
-  text-anchor: middle;
-}
 .hours {
 	x: 305;
 	y: 165;
@@ -14,6 +8,22 @@
 .minutes {
 	x: 305;
 	y: 210;
+}
+.stat {
+  font-size: 25;
+  font-family: System-Bold;
+  text-length: 32;
+  text-anchor: middle;
+}
+.steps {
+	x: 66;
+	y: 28;
+}
+.time {
+  font-size: 50;
+  font-family: System-Bold;
+  text-length: 32;
+  text-anchor: middle;
 }
 #wrapper {
   height: 100%;
