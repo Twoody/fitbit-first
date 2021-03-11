@@ -7,7 +7,7 @@ import { today } from "user-activity"
 import * as util from "../common/utils"
 
 // Update the clock every minute
-clock.granularity = "minutes"
+clock.granularity = "seconds"
 
 // Get a handle on the <text> element
 const hoursLabel = document.getElementById("hoursLabel")
@@ -30,12 +30,14 @@ clock.ontick = (evt) => {
 		hours = util.zeroPad(hours);
 	}
 	let mins = util.zeroPad(today.getMinutes());
-	hoursLabel.text = `${hours}`;
-	minutesLabel.text = `${mins}`;
+	hoursLabel.text = hours.toString();
+	minutesLabel.text = mins.toString();
 	if (appbit.permissions.granted("access_activity"))
 	{
-		//stepsLabel.text = `${today.adjusted.steps}`
-		stepsLabel.text = `${9999}`
+		// TODO: Test different steps amounts
+		const steps = today && today.ajusted && today.adjusted.steps ? 
+			today.adjusted.steps : '--'
+		stepsLabel.text = steps.toString()
 	}
 	else
 	{
