@@ -1,6 +1,17 @@
 <svg id='wrapper' class="background">
-	<image id="cooper" width="100%" height="100%" href="cooper2.png"/>
+	<image x="0" y="17" id="cooper" width="100%" height="100%" href="cooper2.png"/>
 	<text id="hoursLabel" class="time hours" />
 	<text id="minutesLabel" class="time minutes" />
+
+	<!-- Top info bar -->
+	<svg>
+		<rect
+			fill='blue'
+			height='33'
+			width='100%'
+			x='0'
+			y='0'
+		/>
+	</svg>
 	<text id="stepsLabel" class="stat steps" />
 </svg>
