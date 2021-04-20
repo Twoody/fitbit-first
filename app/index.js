@@ -12,7 +12,7 @@ clock.granularity = "seconds"
 // Get a handle on the <text> element
 const hoursLabel = document.getElementById("hoursLabel")
 const minutesLabel = document.getElementById("minutesLabel")
-const stepsLabel =  document.getElementById("stepsLabel")
+const stepsLabel =  document.getElementById("stepsLabel2")
 
 // Update the <text> element every tick with the current time
 clock.ontick = (evt) => {
