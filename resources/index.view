@@ -41,7 +41,7 @@
 			<text
 				class="stat steps"
 				fill="white"
-				id="stepsLabel1"
+				id="stepsLabel"
 				layer="4"
 				text-anchor="middle"
 			/>
@@ -63,7 +63,7 @@
 			<text
 				class="stat steps"
 				fill="white"
-				id="stepsLabel2"
+				id="abrDate"
 				layer="4"
 				text-anchor="start"
 			/>
@@ -85,7 +85,7 @@
 			<text
 				class="stat steps"
 				fill="white"
-				id="stepsLabel3"
+				id="dateFull"
 				layer="4"
 				text-anchor="middle"
 			/>
