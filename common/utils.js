@@ -1,9 +1,19 @@
+import { gettext } from "i18n";
+
 // Add zero in front of numbers < 10
 export function zeroPad(i) {
   if (i < 10) {
     i = "0" + i;
   }
   return i;
+}
+
+export function localeMonth(month){
+  return gettext("m_"+month)
+}
+
+export function localeWeekDay(day){
+  return gettext("w_"+day)
 }
 
 /**

@@ -13,12 +13,19 @@ clock.granularity = "seconds"
 const hoursLabel = document.getElementById("hoursLabel")
 const minutesLabel = document.getElementById("minutesLabel")
 const stepsLabel =  document.getElementById("stepsLabel")
+const dateLabel =  document.getElementById("dateFull")
 
 // Update the <text> element every tick with the current time
 clock.ontick = (evt) => {
 	let today = evt.date;
 	let hours = today.getHours();
+	let mins = util.zeroPad(today.getMinutes());
 
+	let month = util.localeMonth(today.getMonth());
+	let weekDay = util.localeWeekDay(today.getDay());
+	let day = today.getDate();
+
+	// Set Time
 	if (preferences.clockDisplay === "12h")
 	{
 		// 12h format
@@ -29,19 +36,21 @@ clock.ontick = (evt) => {
 		// 24h format
 		hours = util.zeroPad(hours);
 	}
-	let mins = util.zeroPad(today.getMinutes());
 	hoursLabel.text = hours.toString();
 	minutesLabel.text = mins.toString();
+
+	// Set date
+	dateLabel.text = `${weekDay} ${month} ${day}`
+
 	if (appbit.permissions.granted("access_activity"))
 	{
-		// TODO: Test different steps amounts
 		const steps = today && today.ajusted && today.adjusted.steps ? 
 			today.adjusted.steps : '--'
 		stepsLabel.text = steps.toString()
 	}
 	else
 	{
-		console.log('no access')
+		// console.log('no access')
 	}
 }
 

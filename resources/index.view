@@ -38,12 +38,16 @@
 			x='0'
 			y='0'
 		>
-			<text
+			<textarea
 				class="stat steps"
+				display-align='center'
 				fill="white"
+				font-family= 'System-Bold'
+				font-size='17'
 				id="stepsLabel"
 				layer="4"
 				text-anchor="middle"
+				x="10"
 			/>
 			<rect
 				fill='red'
@@ -56,38 +60,17 @@
 		<!-- TODO: Give this a class name and move styles there -->
 		<section
 			height='30'
-			width='20%'
-			x='134'
+			width='60%'
+			x='40%'
 			y='0'
 		>
-			<text
+			<textarea
 				class="stat steps"
 				fill="white"
-				id="abrDate"
-				layer="4"
-				text-anchor="start"
-			/>
-			<rect
-				fill='blue'
-				height='100%'
-				layer="3"
-				width='100%'
-			/>
-		</section>
-
-		<!-- TODO: Give this a class name and move styles there -->
-		<section
-			height='30'
-			width='40%'
-			x='20% + 134'
-			y='0'
-		>
-			<text
-				class="stat steps"
-				fill="white"
+				font-family= 'System-Bold'
 				id="dateFull"
 				layer="4"
-				text-anchor="middle"
+				text-anchor="before"
 			/>
 			<rect
 				fill='green'
