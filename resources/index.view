@@ -1,7 +1,7 @@
 <svg id='wrapper' class="background">
 	<image
 		height="100%"
-		href="cooper2.png"
+		href="cooper.png"
 		id="cooper"
 		layer="1"
 		width="100%"
